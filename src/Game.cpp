@@ -148,8 +148,8 @@ void Game::spawnPlayer()
     
 
     e->SpecialAbilities.push_back(std::make_shared<cSpecialAbility>(SpecialAbilityType::INSTANT_DAMAGE, 1000.f, 0.f));
-    e->SpecialAbilities.push_back(std::make_shared<cSpecialAbility>(SpecialAbilityType::STATIC_BLACK_HOLE, 50000.f, 0.f));
-    e->SpecialAbilities.push_back(std::make_shared<cSpecialAbility>(SpecialAbilityType::MOVING_BLACK_HOLE, 25000.f, 0.f));
+    e->SpecialAbilities.push_back(std::make_shared<cSpecialAbility>(SpecialAbilityType::STATIC_BLACK_HOLE, 500.f, 0.f));
+    e->SpecialAbilities.push_back(std::make_shared<cSpecialAbility>(SpecialAbilityType::MOVING_BLACK_HOLE, 250.f, 0.f));
     e->SpecialAbilities.push_back(std::make_shared<cSpecialAbility>(SpecialAbilityType::AI_COMPANION, 100000.f, 0.f));
 
     m_player = e;
@@ -885,7 +885,7 @@ void Game::sScore()
 
     for(auto& e: m_entityManager.getEntities())
     {
-        if(e->tag() == "enemy" && e->isActive() == false)
+        if((e->tag() == "enemy" || e->tag() == "small_enemy") && e->isActive() == false)
         {
             m_score += e->Score->score;
         }
