@@ -1,0 +1,2 @@
+Special Features
+- have a list of special weapons to choose from(follower to kill enemies, instant damage to all enemies, ...)
