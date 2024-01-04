@@ -850,7 +850,7 @@ void Game::sCollision()
             {
                 if(e1->tag() == "enemy" || e1->tag() == "small_enemy")
                 {
-                    if((e2->tag() == "bullet") && isCollision(e1,e2))
+                    if((e2->tag() == "bullet" || e2->tag() == "player") && isCollision(e1,e2))
                     {
                         e1->destroy();
                         e2->destroy();
