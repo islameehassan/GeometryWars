@@ -1,1 +1,1 @@
-Geomtery wars in SFML and imgui
+Geometry wars in SFML and imgui
